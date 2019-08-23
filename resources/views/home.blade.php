@@ -17,17 +17,17 @@
                     @endif
 
             <div class="data-user">
-            <a href="{{ route('image.detail', ['id'=>$image->id]) }}">
                 {{ $image->user->name.' '.$image->user->surname }}
             <span class="nickname">{{ ' | @'.$image->user->nick }}</span>
-        </a>
             </div>
         </div>
 
         <div class="card-body">
 
                 <div class="image-container">
+                        <a href="{{ route('image.detail', ['id'=>$image->id]) }}">
                         <img src="{{ route('image.file',['filename'=> $image->image_path]) }}" alt="">
+                        </a>
                 </div>
 
                 
